@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+  background: gray;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.swal-overlay {
+    background-color: rgba(137, 141, 208, 0.45);
+
+}
+
+.swal-modal {
+    border-radius: 10rem solid;
+}
+
+.swal-title {
+    margin: 0;
+    font-size: 4rem;
+}
+
+.swal-text {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.gameboard {
+    width: 80vh;
+    height: 80vh;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.color{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+ 
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.rojo.light {
+    background-color: #ecb9b9;
+}
+
+
+.azul {
+    background-color: blue;
+}
+
+.azul.light {
+    background-color: #a3a3f9;
+}
+
+.verde {
+    background-color: green;
+}
+
+.verde.light {
+    background-color: #87f787;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+.amarillo.light {
+    background-color: #ece988;
+}
+
+.btn-start {
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 3.5rem;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px);
+}
+  
+.hide {
+    display: none;
+}
