@@ -20,7 +20,7 @@ class Juego {
         
         this.inicializar = this.inicializar.bind(this)
 
-        setTimeout(() => this.inicializar(), 100)
+        setTimeout(() => this.inicializar(), 200)
         this.generarSecuencia()
         setTimeout(() =>
         {this.siguienteNivel()}, 1000);
@@ -145,12 +145,16 @@ class Juego {
         this.colores[color].classList.remove('light')
         if(this.colores[color] === rojo){
             audiorojo.pause()
+            audiorojo.currentTime = 0
         } else if(this.colores[color] === azul){
             azulnota.pause()
+            azulnota.currentTime = 0
         } else if(this.colores[color] === verde){
             verdenota.pause()
+            verdenota.currentTime = 0
         } else {
             amarillonota.pause()
+            amarillonota.currentTime = 0
         }
         
         
@@ -211,10 +215,10 @@ class Juego {
     ganoElJuego()
     {
         swal({
-            title: 'Buen Trabajo',
-            text: 'Has Ganado el Juego',
+            title: 'Felicidades',
+            text: 'Has perdido unos valiosos segundos de tu vida :)',
             icon: 'success',
-            button: 'Enviciate',
+            button: 'Chau',
         })
             .then(() => this.inicializar)   
     }
@@ -223,9 +227,9 @@ class Juego {
     {
         swal({
             title: 'Perdiste',
-            text: 'No lo intentes de nuevo :)',
+            text: 'Pero creo en ti',
             icon: 'error',
-            button: 'No juegues de nuevo',
+            button: 'Tu puedes',
         })
             .then(() => {
                 this.eliminarEventosClick()
