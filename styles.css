@@ -12,7 +12,7 @@ body{
   background: #0099CC;
   display: flex;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .swal-overlay {
@@ -26,12 +26,12 @@ body{
 
 .swal-title {
     margin: 0;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .swal-text {
     margin: 0;
-    font-size: 4rem;
+    font-size: 1.5rem;
     line-height: 0;
 }
 
