@@ -9,11 +9,17 @@
 <body>
     <div class="gameboard">
         <div id="rojo" class="color rojo left" data-color="rojo">
+            <audio src="./do_nota.mp3" id="rojo_nota"></audio>
         </div>
         <div id="azul" class="color azul right" data-color="azul">
+            <audio src="./fa_nota.mp3" id="azul_nota"></audio>
         </div>
-        <div id="verde" class="color verde left" data-color="verde"></div>
-        <div id="amarillo" class="color amarillo right" data-color="amarillo"></div> 
+        <div id="verde" class="color verde left" data-color="verde">
+            <audio src="./mi_nota.mp3" id="verde_nota"></audio>
+        </div>
+        <div id="amarillo" class="color amarillo right" data-color="amarillo">
+            <audio src="./sol_nota.mp3" id="amarillo_nota"></audio>
+        </div> 
         <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar Juego</button>
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

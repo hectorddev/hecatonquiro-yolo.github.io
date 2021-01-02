@@ -2,20 +2,28 @@ const rojo = document.getElementById('rojo')
 const azul = document.getElementById('azul')
 const verde = document.getElementById('verde')
 const amarillo = document.getElementById('amarillo')
+const audiorojo = document.getElementById('rojo_nota')
+const azulnota = document.getElementById('azul_nota')
+const verdenota = document.getElementById('verde_nota')
+const amarillonota = document.getElementById('amarillo_nota')
 
 const btnEmpezar = document.getElementById
 ('btnEmpezar') 
+
+
 
 const ULTIMO_NIVEL = 10
 
 
 class Juego {
     constructor() {
+        
         this.inicializar = this.inicializar.bind(this)
-        this.inicializar()
+
+        setTimeout(() => this.inicializar(), 100)
         this.generarSecuencia()
         setTimeout(() =>
-        {this.siguienteNivel()}, 500);
+        {this.siguienteNivel()}, 1000);
         
     }
 
@@ -31,6 +39,9 @@ class Juego {
             verde,
             amarillo
         }
+
+    
+
     }
 
     toggleBtnEmpezar(){
@@ -47,12 +58,9 @@ class Juego {
         //Funcion que inicializa un array con un tamaño de 10, luego lo llena con 0 y me itera en cada índice con un número aleatorio
 
         this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 4));
-        console.log(this.secuencia)
+        
     }
     
-    recorrido(){
-        this.array = []
-    }
 
     siguienteNivel() {
         this.subnivel = 0
@@ -99,20 +107,53 @@ class Juego {
         for(let i = 0; i < this.nivel; i++)
         {
             let color = this.transformarNumeroAColor(this.secuencia[i])
-            setTimeout(() => this.iluminarColor(color), 1000 * i) //Es importante la multiplicación por i, ya que cada ronda va a tardar más la activación de iluminación. 
+            setTimeout(() => this.iluminarColor(color), 500 * i) //Es importante la multiplicación por i, ya que cada ronda va a tardar más la activación de iluminación. 
         }
     }
 
     iluminarColor(color)
     //Funcion que me activa la clase 'light' asignada a cada propiedad de colores CSS. 
-    {
+    {   
+        
+        
+        
         this.colores[color].classList.add('light')
+        console.log(this.colores[color])
+        if(this.colores[color] === rojo){
+            audiorojo.play()
+        } else if(this.colores[color] === azul){
+            azulnota.play()
+        } else if(this.colores[color] === verde){
+            verdenota.play()
+        } else {
+            amarillonota.play()
+        }
+       
 
-        setTimeout(() => this.apagarColor(color), 350)
+        setTimeout(() => {
+            this.apagarColor(color)
+        }, 450)
+
+      
+
+        
     }
 
     apagarColor(color) {
+        
+        
         this.colores[color].classList.remove('light')
+        if(this.colores[color] === rojo){
+            audiorojo.pause()
+        } else if(this.colores[color] === azul){
+            azulnota.pause()
+        } else if(this.colores[color] === verde){
+            verdenota.pause()
+        } else {
+            amarillonota.pause()
+        }
+        
+        
     }
 
 
@@ -138,10 +179,9 @@ class Juego {
     {
         
         let nombreColor = ev.target.dataset.color
-        console.log(nombreColor)
-    
+       
         
-
+        
         let numeroColor = this.transformarColorANumero(nombreColor) 
         this.iluminarColor(nombreColor)
         console.log(numeroColor)
@@ -182,8 +222,8 @@ class Juego {
     perdioElJuego()
     {
         swal({
-            title: 'Awww',
-            text: 'Eres muy malo',
+            title: 'Perdiste',
+            text: 'No lo intentes de nuevo :)',
             icon: 'error',
             button: 'No juegues de nuevo',
         })
@@ -191,6 +231,7 @@ class Juego {
                 this.eliminarEventosClick()
                 this.inicializar()})    
     } 
+        
 }
 
 

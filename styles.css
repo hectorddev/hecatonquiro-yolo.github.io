@@ -9,7 +9,7 @@ html {
 }
 
 body{
-  background: gray;
+  background: #0099CC;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -36,11 +36,11 @@ body{
 }
 
 .gameboard {
-    width: 80vh;
-    height: 80vh;
+    width: 55vh;
+    height: 60vh;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 10px 10px;
 }
 
 .color{
@@ -59,47 +59,50 @@ body{
 }
 
 .rojo {
-    background-color: red;
+    background-color: rgb(199,0,57);
 }
 
 .rojo.light {
-    background-color: #ecb9b9;
+    background-color: rgb(199,0,57, 0.70);
 }
 
 
 .azul {
-    background-color: blue;
+    background-color: rgb(17,29,94);
 }
 
 .azul.light {
-    background-color: #a3a3f9;
+    background-color:rgb(17,29,94, 0.70);
 }
 
 .verde {
-    background-color: green;
+    background-color: rgb(192,226,24);
 }
 
 .verde.light {
-    background-color: #87f787;
+    background-color: rgb(192,226,24, 0.70);
 }
 
 .amarillo {
-    background-color: yellow;
+    background-color: rgb(243,113,33);
 }
 
 .amarillo.light {
-    background-color: #ece988;
+    background-color: rgb(243,113,33, 0.70);
 }
 
 .btn-start {
-    width: 400px;
-    height: 100px;
-    background: #ecf0f1;
-    color: #2c3e50;
-    font-size: 3.5rem;
+    background-color: #00303F;
+    color: #E7D9EA;
+    border: 2px solid #0099CC;
+    width: 150px;
+    height: 80px;
+    border-radius: 6px;
     position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 200px);
+    top: calc(50% - 30px);
+    left: calc(50% - 70px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5rem;
 }
   
 .hide {
