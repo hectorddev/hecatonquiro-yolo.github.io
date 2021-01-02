@@ -36,8 +36,8 @@ body{
 }
 
 .gameboard {
-    width: 55vh;
-    height: 60vh;
+    width: 50vh;
+    height: 50vh;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
