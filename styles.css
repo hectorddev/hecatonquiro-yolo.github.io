@@ -40,7 +40,7 @@ body{
     height: 60vh;
     border-radius: 50%;
     overflow: hidden;
-    margin: 10px 10px;
+    margin: 0 auto;
 }
 
 .color{
