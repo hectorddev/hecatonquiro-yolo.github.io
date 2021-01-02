@@ -12,7 +12,7 @@ const btnEmpezar = document.getElementById
 
 
 
-const ULTIMO_NIVEL = 10
+const ULTIMO_NIVEL = 15
 
 
 class Juego {
@@ -216,7 +216,7 @@ class Juego {
     {
         swal({
             title: 'Felicidades',
-            text: 'Has perdido unos valiosos segundos de tu vida :)',
+            text: 'Sigue con tu vida',
             icon: 'success',
             button: 'Chau',
         })
