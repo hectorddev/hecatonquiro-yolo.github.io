@@ -33,6 +33,7 @@ class Juego {
         this.elegirColor = this.elegirColor.bind(this)
         this.nivel = 1 //Esta propiedad o atributo me permite saber cuantos colores van a ser iluminados en un futuro.
         this.record = 0
+        this.puntaje = 0
         this.toggleBtnEmpezar()
         this.colores = {
             rojo, 
@@ -199,7 +200,8 @@ class Juego {
             if(this.subnivel === this.nivel)
             {
                 this.nivel++
-                puntaje.textContent = `Tu puntaje es: ${this.subnivel}`
+                this.puntaje++
+                puntaje.textContent = `Tu puntaje es: ${this.puntaje}`
                 this.eliminarEventosClick() 
                 if(this.nivel === (ULTIMO_NIVEL + 1))
                 {
@@ -228,8 +230,8 @@ class Juego {
 
     perdioElJuego()
     {
-        arreglo.push(this.subnivel)
-        puntaje.textContent = `Puntaje final: ${this.subnivel}`
+        arreglo.push(this.puntaje)
+        puntaje.textContent = `Puntaje final: ${this.puntaje}`
         record.textContent = `Record: ${arreglo[0]}`
         swal({
             title: 'Perdiste',
