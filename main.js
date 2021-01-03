@@ -6,20 +6,21 @@ const audiorojo = document.getElementById('rojo_nota')
 const azulnota = document.getElementById('azul_nota')
 const verdenota = document.getElementById('verde_nota')
 const amarillonota = document.getElementById('amarillo_nota')
+const puntaje = document.getElementById('puntaje')
+const record = document.getElementById('record')
 
 const btnEmpezar = document.getElementById
 ('btnEmpezar') 
 
-
+let arreglo = []
 
 const ULTIMO_NIVEL = 15
 
 
 class Juego {
     constructor() {
-        
-        this.inicializar = this.inicializar.bind(this)
 
+        this.inicializar = this.inicializar.bind(this)
         setTimeout(() => this.inicializar(), 200)
         this.generarSecuencia()
         setTimeout(() =>
@@ -31,7 +32,7 @@ class Juego {
         //Funcion que me quita el boton de 'Empezar' y me declara: el nivel donde estoy y los colores disponibles. 
         this.elegirColor = this.elegirColor.bind(this)
         this.nivel = 1 //Esta propiedad o atributo me permite saber cuantos colores van a ser iluminados en un futuro.
-
+        this.record = 0
         this.toggleBtnEmpezar()
         this.colores = {
             rojo, 
@@ -39,8 +40,8 @@ class Juego {
             verde,
             amarillo
         }
-
-    
+        arreglo.pop()
+       
 
     }
 
@@ -198,6 +199,7 @@ class Juego {
             if(this.subnivel === this.nivel)
             {
                 this.nivel++
+                puntaje.textContent = `Tu puntaje es: ${this.subnivel}`
                 this.eliminarEventosClick() 
                 if(this.nivel === (ULTIMO_NIVEL + 1))
                 {
@@ -208,6 +210,7 @@ class Juego {
             }   
         } 
         else {
+            console.log(arreglo)
             this.perdioElJuego()
         } 
     }
@@ -225,6 +228,9 @@ class Juego {
 
     perdioElJuego()
     {
+        arreglo.push(this.subnivel)
+        puntaje.textContent = `Puntaje final: ${this.subnivel}`
+        record.textContent = `Record: ${arreglo[0]}`
         swal({
             title: 'Perdiste',
             text: 'Pero creo en ti',
