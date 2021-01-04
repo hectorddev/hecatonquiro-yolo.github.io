@@ -2,12 +2,16 @@ const rojo = document.getElementById('rojo')
 const azul = document.getElementById('azul')
 const verde = document.getElementById('verde')
 const amarillo = document.getElementById('amarillo')
-const audiorojo = document.getElementById('rojo_nota')
-const azulnota = document.getElementById('azul_nota')
-const verdenota = document.getElementById('verde_nota')
-const amarillonota = document.getElementById('amarillo_nota')
+
 const puntaje = document.getElementById('puntaje')
 const record = document.getElementById('record')
+
+
+let validacionRojo = false
+let validacionVerde = false
+let validacionAzul = false
+let validacionAmarillo = false
+
 
 const btnEmpezar = document.getElementById
 ('btnEmpezar') 
@@ -16,10 +20,51 @@ let arreglo = []
 
 const ULTIMO_NIVEL = 15
 
+btnEmpezar.classList.add('hide')
+
+
+
+audiorojo = new Audio()
+audiorojo.src = 'sol_nota.mp3'
+audiorojo.addEventListener('load', terminarCarga)
+
+azulnota = new Audio()
+azulnota.src = 'sol_nota.mp3'
+azulnota.addEventListener('load', terminarCarga)
+
+verdenota = new Audio()
+verdenota.src = 'sol_nota.mp3'
+verdenota.addEventListener('load', terminarCarga)
+
+
+amarillonota = new Audio()
+amarillonota.src = 'sol_nota.mp3'
+amarillonota.addEventListener('load', terminarCarga)
+
+
+function terminarCarga() {
+    if(!validacionRojo) {
+        validacionRojo = true
+    }
+    if(!validacionAzul) {
+        validacionAzul = true
+    }
+    if(!validacionVerde) {
+        validacionVerde = true
+    }
+    if(!validacionAmarillo) {
+        validacionAmarillo = true
+    }
+    return 0
+}
+
+if(terminarCarga() === 0){
+    btnEmpezar.classList.remove('hide')
+}
+
 
 class Juego {
     constructor() {
-
         this.inicializar = this.inicializar.bind(this)
         setTimeout(() => this.inicializar(), 200)
         this.generarSecuencia()
