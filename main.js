@@ -25,7 +25,7 @@ btnEmpezar.classList.add('hide')
 
 
 audiorojo = new Audio()
-audiorojo.src = 'sol_nota.mp3'
+audiorojo.src = 'do_nota.mp3'
 audiorojo.addEventListener('load', terminarCarga)
 
 azulnota = new Audio()
@@ -33,12 +33,12 @@ azulnota.src = 'sol_nota.mp3'
 azulnota.addEventListener('load', terminarCarga)
 
 verdenota = new Audio()
-verdenota.src = 'sol_nota.mp3'
+verdenota.src = 'mi_nota.mp3'
 verdenota.addEventListener('load', terminarCarga)
 
 
 amarillonota = new Audio()
-amarillonota.src = 'sol_nota.mp3'
+amarillonota.src = 'fa_nota.mp3'
 amarillonota.addEventListener('load', terminarCarga)
 
 
