@@ -179,7 +179,7 @@ class Juego {
 
         setTimeout(() => {
             this.apagarColor(color)
-        }, 450)
+        }, 250)
 
       
 
