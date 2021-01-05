@@ -9,34 +9,35 @@ html {
 }
 
 body{
-  background: #0099CC;
+  background-image: linear-gradient( 109.6deg,  rgba(121,203,202,1) 11.2%, rgba(119,161,211,1) 91.1% );
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Bungee Outline', cursive;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 100%;
     height: 25vh;
+    line-height: 7rem;
 }
 
 header h1 {
     display: flex;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     color: white;
 }
 
 header p {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -81,6 +82,7 @@ footer div p {
     width: 50vh;
     height: 50vh;
     border-radius: 50%;
+    border: 4px solid #0099CC;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
@@ -136,17 +138,21 @@ footer div p {
 
 
 .btn-start {
-    background-color: #00303F;
-    color: #E7D9EA;
+    
     border: 2px solid #0099CC;
     width: 20vh;
     height: 15vh;
+    background-image: linear-gradient( 109.6deg,  rgba(121,203,202,1) 11.2%, rgba(119,161,211,1) 91.1% );
+    color: black;
     border-radius: 30px;
     outline: none;
     position: absolute;
     top: 36%;
     left: 31%;
+    font-family: 'Bungee Outline', cursive;
     font-size: 2rem;
+    font-weight: bold;
+    
 }
   
 .hide {
