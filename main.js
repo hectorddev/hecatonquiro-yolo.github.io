@@ -59,7 +59,8 @@ function terminarCarga() {
 }
 
 if(terminarCarga() === 0){
-    btnEmpezar.classList.remove('hide')
+    setTimeout(() => btnEmpezar.classList.remove('hide'), 1000 )
+    
 }
 
 
