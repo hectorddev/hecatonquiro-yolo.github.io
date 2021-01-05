@@ -1,3 +1,7 @@
+const btnEmpezar = document.getElementById
+('btnEmpezar') 
+btnEmpezar.classList.add('hide')
+
 const rojo = document.getElementById('rojo')
 const azul = document.getElementById('azul')
 const verde = document.getElementById('verde')
@@ -13,14 +17,12 @@ let validacionAzul = false
 let validacionAmarillo = false
 
 
-const btnEmpezar = document.getElementById
-('btnEmpezar') 
 
 let arreglo = []
 
 const ULTIMO_NIVEL = 15
 
-btnEmpezar.classList.add('hide')
+
 
 
 
