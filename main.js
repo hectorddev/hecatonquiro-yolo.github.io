@@ -17,12 +17,22 @@ let validacionAzul = false
 let validacionAmarillo = false
 
 
+swal({  
+    title: 'Elige tu nivel: ', 
+    buttons: {
+        confirm: 'Padawan',
+        cancel: 'Maestro Pokemon',
+        roll: {
+            text: 'Guerrero Sayajin', 
+            value: true
+        }, 
+    }
+})
+
 
 let arreglo = []
 
 const ULTIMO_NIVEL = 15
-
-
 
 
 
