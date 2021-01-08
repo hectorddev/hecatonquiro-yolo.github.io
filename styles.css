@@ -63,11 +63,15 @@ footer div p {
 }
 
 .swal-modal {
-    border-radius: 10rem solid;
+    width: max-content;
+    height: max-content;
+    border: 3px solid #7CD1F9;
+    border-radius: 15px;
 }
 
 .swal-title {
     margin: 0;
+    color: #809ED1;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -80,20 +84,23 @@ footer div p {
     text-align: center;
 }
 
+.swal-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .swal-button{
-    display: inline;
-    margin: 0 auto;
-    padding: 20px;
+    width: 12rem;
+    height: 6rem;
 }
 
-.swal-button--confirm{
-    margin-right: 1.5px;
+.swal-button--cancel{
+    background-color: #7CD1F9;
+    color: white;
 }
 
-
-.swal-button--roll{
-    margin: 0 auto;
-}
 
 
 .gameboard {
