@@ -78,7 +78,7 @@ footer div p {
 
 .swal-text {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 0;
     text-align: center;
@@ -133,7 +133,7 @@ footer div p {
 }
 
 .rojo.light {
-    background-color: rgb(199,0,57, 0.70);
+    background-color: rgba(199,0,57, 0.40);
 }
 
 
@@ -142,7 +142,7 @@ footer div p {
 }
 
 .azul.light {
-    background-color:rgb(17,29,94, 0.70);
+    background-color:rgb(17,29,94, 0.40);
 }
 
 .verde {
@@ -150,7 +150,7 @@ footer div p {
 }
 
 .verde.light {
-    background-color: rgb(192,226,24, 0.70);
+    background-color: rgb(192,226,24, 0.40);
 }
 
 .amarillo {
@@ -158,7 +158,7 @@ footer div p {
 }
 
 .amarillo.light {
-    background-color: rgb(243,113,33, 0.70);
+    background-color: rgb(243,113,33, 0.40);
 }
 
 

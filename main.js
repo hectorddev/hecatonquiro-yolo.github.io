@@ -17,18 +17,33 @@ let validacionAzul = false
 let validacionAmarillo = false
 
 
+
 swal({  
     title: 'Elige tu nivel: ', 
     buttons: {
-        confirm: 'Padawan',
-        cancel: 'Maestro Pokemon',
-        roll: {
+        confirm:{
+            text:'Padawan',
+            value: 0},
+        roll1:{
+            text: 'Maestro Pokemon ',
+            value: 0,
+        },
+        roll2: {
             text: 'Guerrero Sayajin', 
-            value: true
-        }, 
+            value: 0,
+        }
     }
 })
+    .then(() => {
+        swal.setActionValue({roll:1})
+    })
 
+let swalJson = swal.getState()
+
+
+function prueba(){
+    console.log('es una prueba')
+}
 
 let arreglo = []
 
@@ -189,12 +204,10 @@ class Juego {
             amarillonota.play()
         }
        
-
+        
         setTimeout(() => {
             this.apagarColor(color)
-        }, 450)
-
-      
+        }, 400)
 
         
     }
