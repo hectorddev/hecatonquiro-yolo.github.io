@@ -52,20 +52,19 @@ const ULTIMO_NIVEL = 15
 
 
 audiorojo = new Audio()
-audiorojo.src = 'do_nota.mp3'
+audiorojo.src = './assets/do_nota.mp3'
 audiorojo.addEventListener('load', terminarCarga)
 
 azulnota = new Audio()
-azulnota.src = 'sol_nota.mp3'
+azulnota.src = './assets/sol_nota.mp3'
 azulnota.addEventListener('load', terminarCarga)
 
 verdenota = new Audio()
-verdenota.src = 'mi_nota.mp3'
+verdenota.src = './assets/mi_nota.mp3'
 verdenota.addEventListener('load', terminarCarga)
 
-
 amarillonota = new Audio()
-amarillonota.src = 'fa_nota.mp3'
+amarillonota.src = './assets/fa_nota.mp3'
 amarillonota.addEventListener('load', terminarCarga)
 
 
